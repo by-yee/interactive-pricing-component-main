@@ -1,0 +1,133 @@
+.main {
+    height: 27rem;
+    width: 20rem;
+    padding: 2rem 2rem;
+    background-color: $white;
+    box-shadow: 0px 0 12px -8px $darkDesaturatedBlue;
+    border-radius: 10px;
+
+    @include breakpoint-up(medium) {
+        height: 23rem;
+        width: 32rem;
+        padding: 2rem 3rem;
+    }
+
+    &__flex {
+        @include breakpoint-up(medium) {
+            @include flex-display(row, space-between, center);
+            flex-wrap: wrap;
+
+            & :nth-child(1) {
+                order: 1;
+            }
+
+            & :nth-child(2) {
+                order: 3;
+                flex: 1 0 100%;
+            }
+
+            & :nth-child(3) {
+                order: 2;
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    &__pageview {
+        color: $grayishBlue;
+        font-size: $font-11;
+        font-weight: $weight-800;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.09375rem;
+
+        @include breakpoint-up(medium) {
+            font-size: $font-13;
+        }
+    }
+
+    &__price {
+        @include flex-display(row, center, center);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: $grayishBlue;
+        font-size: $font-14;
+
+        @include breakpoint-up(medium) {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        & .pricing {
+            padding-right: 0.5rem;
+            color: $darkDesaturatedBlue;
+            font-size: $font-30;
+            font-weight: $weight-800;
+
+            @include breakpoint-up(medium) {
+                font-size: $font-36;
+            }
+        }
+    }
+
+    &__divider {
+        width: 125%;
+        margin: 1rem 0px 1rem -2rem;
+        border-bottom: 1px solid $lightGrayishBlueSlider;
+
+        @include breakpoint-up(medium) {
+            width: 115%;
+        }
+    }
+
+    &__content {
+        @include flex-display(column, center, center);
+
+        @include breakpoint-up(medium) {
+            @include flex-display(row, space-between, center);
+            padding-top: 0.625rem
+        }
+    }
+
+    &__benefit {
+        @include flex-display(column, center, center);
+
+        @include breakpoint-up(medium) {
+            @include flex-display(column, normal, start);
+        }
+        
+        &--item {
+            @include flex-display(row, center, center);
+            padding-top: 0.3125rem;
+            padding-bottom: 0.3125rem;
+
+            & img {
+                padding-right: 0.75rem;
+            }
+        }
+
+        &--label {
+            color: $grayishBlue;
+            font-size: $font-11;
+        }
+    }
+
+    &__cta {
+        padding: 1.625rem 0px;
+        cursor: pointer;
+
+        a {
+            color: $paleBlue;
+            background-color: $darkDesaturatedBlue;
+            padding: 0.75rem 2.5rem;
+            font-size: $font-12;
+            border-radius: 20px;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}
+

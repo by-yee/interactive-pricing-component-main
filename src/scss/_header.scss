@@ -1,0 +1,69 @@
+.header {
+    padding-top: 2rem;
+
+    @include breakpoint-up(medium) {
+        padding-bottom: 2rem;
+    }
+
+    &::before {
+        content: "";
+        background-image: url('../images/bg-pattern.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 28rem;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+
+    &__title {
+        position: relative;
+
+        h1 {
+            font-size: $font-20;
+            color: $darkDesaturatedBlue;
+
+            @include breakpoint-up(medium) {
+                font-size: $font-27;
+            }
+        }
+
+        img {
+            position: absolute;
+            top: -32px;
+            left: 25%;
+            z-index: -1;
+
+            @include breakpoint-up(medium) {
+                top: -44px;
+                left: 30%;
+            }
+        }
+    }
+
+    &__paragraph {
+        padding-bottom: 3.4375rem;
+        
+        @include breakpoint-up(medium) {
+            @include flex-display(row, center, normal);
+
+            padding-bottom: 3.125rem;
+        }
+
+        p {
+            padding-bottom: 0.3125rem;
+            font-size: $font-12;
+
+            @include breakpoint-up(medium) {
+                font-size: $font-14;
+                font-weight: bold;
+
+                &:nth-child(2) {
+                    text-indent: 3px;
+                }
+            }
+        }
+    }
+}

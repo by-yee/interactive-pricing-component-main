@@ -1,0 +1,49 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *:after {
+    box-sizing: inherit;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    font-size: $font-15;
+    background-color: $veryPaleBlue;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    color: $grayishBlue;
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 90rem;
+    margin: 0 auto;
+
+    @include flex-display(column, center, center);
+
+    &--pall {
+        padding-top: 3.375rem;
+        padding-left: 2.75rem;
+        padding-bottom: 3.375rem;
+        padding-right: 2.75rem;
+
+        @include breakpoint-up(medium) {
+            padding-top: 2.75rem;
+            padding-bottom: 2.75rem;
+        }
+    }
+}

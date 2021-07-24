@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet"> 
+  <link type="text/css" rel="stylesheet" href="./public/style.css" />
   <title>Frontend Mentor | Interactive pricing component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,25 +17,69 @@
   </style>
 </head>
 <body>
+  <div class="container container--pall">
+    <header class="header">
+      <div class="header__title">
+        <h1>Simple, traffic-based pricing</h1>
+        <img src='../images/pattern-circles.svg' alt="Header Circles Pattern"/>
+      </div>
+      <div class="header__paragraph">
+        <p>Sign-up for our 30-day trial.</p> 
+        <p>No credit card required.</p>
+      </div>
+    </header>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
-
-  Pageviews
-  $ /month
-
-  Monthly Billing
-  Yearly Billing 25% discount
-
-  Unlimited websites
-  100% data ownership
-  Email reports
-
-  Start my trial
+    <main class="main">
+      <div class="main__flex">
+        <div class="main__pageview">
+          <span class="page_view">100k</span> Pageviews
+        </div>
   
-  <div class="attribution">
+        <div class="main__range">
+          <input type="range" aria-label="Price Range" class="main__range--slider" min="1" max="5" value="3">
+        </div>
+  
+        <div class="main__price">
+          <span class="pricing">$16.00</span> / month
+        </div>
+      </div>
+
+      <div class="main__switch">
+        <div class="main__switch--label">Monthly Billing</div>
+        <div class="main__switch--toggle">
+          <input type="checkbox" aria-label="price-toggle" id="switch"/>
+          <label for="switch"></label>
+        </div>
+        <div class="main__switch--label yearly">Yearly Billing</div>
+      </div>
+
+      <div class="main__divider"></div>
+      
+      <div class="main__content">
+        <div class="main__benefit">
+          <div class="main__benefit--item">
+            <img src="../images/icon-check.svg" alt="Icon Check"/>
+            <div class="main__benefit--label">Unlimited websites</div>
+          </div>
+          <div class="main__benefit--item">
+            <img src="../images/icon-check.svg" alt="Icon Check"/>
+            <div class="main__benefit--label">100% data ownership</div>
+          </div>
+          <div class="main__benefit--item">
+            <img src="../images/icon-check.svg" alt="Icon Check"/>
+            <div class="main__benefit--label">Email reports</div>
+          </div>
+        </div>
+        <div class="main__cta">
+          <a href="#">Start my trial</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
