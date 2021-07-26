@@ -32,15 +32,15 @@
     <main class="main">
       <div class="main__flex">
         <div class="main__pageview">
-          <span class="page_view">100k</span> Pageviews
+          <span class="page_view" id="page-view">100k</span> Pageviews
         </div>
   
         <div class="main__range">
-          <input type="range" aria-label="Price Range" class="main__range--slider" min="1" max="5" value="3">
+          <input type="range" aria-label="Price Range" class="main__range--slider" id="range_slider" min="1" max="5" value="3">
         </div>
   
         <div class="main__price">
-          <span class="pricing">$16.00</span> / month
+          <span class="pricing" id="pricing">$16.00</span> / month
         </div>
       </div>
 
@@ -81,5 +81,48 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+
+  <script>
+    const test = document.getElementById('switch');
+    const price = document.querySelector('.main__price span');
+    const range = document.getElementById("range_slider");
+
+    const myObj = { 
+                      1: { view: "10K", price: "$8.00", discount: "$2.00" }, 
+                      2: { view: "50K", price: "$12.00", discount: "$3.00" }, 
+                      3: { view: "100K", price: "$16.00", discount: "$4.00" },
+                      4: { view: "500K", price: "$24.00", discount: "$6.00" },
+                      5: { view: "1M", price: "$36.00", discount: "$9.00" } 
+                  }
+
+    test.addEventListener("change", function() {
+        if(this.checked == true) {
+          price.classList.remove('monthly_price');
+          price.classList.add('yearly_price');
+          changeText(range.value, "discount");
+          
+        }
+        else {
+          price.classList.remove('yearly_price');
+          price.classList.add('monthly_price');
+          changeText(range.value, "price");
+        }
+    })
+
+    range.oninput = function() {
+      if(test.checked) {
+        changeText(this.value, "discount");
+      }
+      else {
+        changeText(this.value, "price");
+      }
+    };
+
+    function changeText(rangeValue, pricing) {
+      document.getElementById("page-view").innerHTML = myObj[rangeValue]["view"];
+      document.getElementById("pricing").innerHTML = myObj[rangeValue][pricing];
+    }
+
+  </script>
 </body>
 </html>

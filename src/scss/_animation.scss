@@ -1,0 +1,46 @@
+@keyframes slide-down {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    1% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    0% {
+        transform: translateY(-20px);
+        visibility: hidden;
+        opacity: 0;
+        
+    }
+}
+
+.monthly_price {
+    color: $darkDesaturatedBlue;
+    animation: slide-down 700ms ease-in-out forwards;
+}
+
+@keyframes slide-up {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    1% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    0% {
+        transform: translateY(20px);
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.yearly_price {
+    color: $lightRed;
+    animation: slide-up 700ms ease-in-out forwards;
+}

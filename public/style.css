@@ -1,3 +1,83 @@
+@-webkit-keyframes slide-down {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+  1% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes slide-down {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+  1% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.monthly_price {
+  color: #293356;
+  -webkit-animation: slide-down 700ms ease-in-out forwards;
+          animation: slide-down 700ms ease-in-out forwards;
+}
+
+@-webkit-keyframes slide-up {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+  1% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+  1% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.yearly_price {
+  color: #ff8c66;
+  -webkit-animation: slide-up 700ms ease-in-out forwards;
+          animation: slide-up 700ms ease-in-out forwards;
+}
+
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
@@ -257,7 +337,6 @@ p {
 
 .main__price .pricing {
   padding-right: 0.5rem;
-  color: #293356;
   font-size: 1.875rem;
   font-weight: 800;
 }
