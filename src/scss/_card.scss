@@ -92,7 +92,7 @@
         @include flex-display(column, center, center);
 
         @include breakpoint-up(medium) {
-            @include flex-display(column, normal, start);
+            @include flex-display(column, normal, flex-start);
         }
         
         &--item {
@@ -112,7 +112,8 @@
     }
 
     &__cta {
-        padding: 1.625rem 0px;
+        margin: 1.125rem 0px;
+        line-height: 2.375rem;
         cursor: pointer;
 
         a {
@@ -125,6 +126,10 @@
 
             &:hover {
                 color: $white;
+            }
+
+            &:focus {
+                outline: 3px dotted $strongCyan;
             }
         }
     }

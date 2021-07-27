@@ -29,7 +29,7 @@
         width: 36px;
         height: 36px;
         background-color: $strongCyan;
-        background-image: url('../../images/icon-slider.svg');
+        background-image: url('../images/icon-slider.svg');
         background-repeat: no-repeat;
         background-position: 7px 11px;
         border: none;
@@ -66,7 +66,7 @@
         width: 36px;
         height: 36px;
         background-color: $strongCyan;
-        background-image: url('../../images/icon-slider.svg');
+        background-image: url('../images/icon-slider.svg');
         background-repeat: no-repeat;
         background-position: 7px 11px;
         border: none;
@@ -123,6 +123,14 @@
             display: block;
             cursor: pointer;
             transition: 0.3s;
+
+            &:focus {
+                outline: 2px solid $darkDesaturatedBlue;
+            }
+
+            &:active:after{
+                background-color: $darkDesaturatedBlue;
+            }
         }
         
         label:after {
@@ -158,10 +166,6 @@
         
         input:not(:checked) + label:hover {
             background-color: $strongCyan;
-        }
-        
-        label:active:after{
-            background-color: $darkDesaturatedBlue;
         }
     }
 }
