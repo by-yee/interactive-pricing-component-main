@@ -115,6 +115,11 @@
         margin: 1.125rem 0px;
         line-height: 2.375rem;
         cursor: pointer;
+        transition: animation 0.3s;
+
+        &:hover {
+            animation: btn-bounce 0.4s linear infinite alternate;
+        }
 
         a {
             color: $paleBlue;

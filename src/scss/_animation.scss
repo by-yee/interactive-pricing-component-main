@@ -44,3 +44,14 @@
     color: $lightRed;
     animation: slide-up 700ms ease-in-out forwards;
 }
+
+//Hover Button animation
+@keyframes btn-bounce {
+    100% {
+        transform: translateY(-5px);
+    }
+
+    0% {
+        transform: translateY(0);
+    }
+}
