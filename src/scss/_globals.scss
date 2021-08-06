@@ -33,7 +33,7 @@ p {
     max-width: 90rem;
     margin: 0 auto;
 
-    @include flex-display(column, center, center);
+    @include flex-display(column, normal, center);
 
     &--pall {
         padding-top: 3.375rem;
